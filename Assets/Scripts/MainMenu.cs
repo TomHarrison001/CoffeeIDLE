@@ -13,9 +13,9 @@ public class MainMenu : MonoBehaviour
     {
         audioManager = FindObjectOfType<AudioManager>();
         controller = FindObjectOfType<GameController>();
-        //audioManager.sounds[0].source.volume = controller.MusicVolume;
-        //audioManager.sounds[1].source.volume = controller.SfxVolume;
-        //audioManager.Play("song");
+        audioManager.sounds[0].source.volume = controller.MusicVolume;
+        audioManager.sounds[1].source.volume = controller.SfxVolume;
+        audioManager.Play("song");
         Slider[] sliders = FindObjectsOfType<Slider>();
         foreach (Slider s in sliders)
         {
@@ -40,12 +40,12 @@ public class MainMenu : MonoBehaviour
         if (s.gameObject.name == "MusicVolume")
         {
             controller.MusicVolume = s.value;
-            //audioManager.sounds[0].source.volume = controller.MusicVolume;
+            audioManager.sounds[0].source.volume = controller.MusicVolume;
         }
         else if (s.gameObject.name == "SfxVolume")
         {
             controller.SfxVolume = s.value;
-            //audioManager.sounds[1].source.volume = controller.SfxVolume;
+            audioManager.sounds[1].source.volume = controller.SfxVolume;
         }
     }
 
@@ -56,7 +56,7 @@ public class MainMenu : MonoBehaviour
 
     public void PlayButtonAudio()
     {
-        //audioManager.Play("select");
+        audioManager.Play("select");
         if (controller.Vibrate) Vibration.Vibrate(30);
     }
 
