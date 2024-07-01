@@ -8,10 +8,11 @@ public class GameController : MonoBehaviour
 
     private CanvasGroup sceneFade;
     private float musicVolume, sfxVolume;
-    private bool vibrate = true;
+    private bool vibrate = true, deleteSave;
     public float MusicVolume { get { return musicVolume; } set { musicVolume = value; SaveData(); } }
     public float SfxVolume { get { return sfxVolume; } set { sfxVolume = value; SaveData(); } }
     public bool Vibrate { get { return vibrate; } set { vibrate = value; SaveData(); } }
+    public bool DeleteSave { get { return deleteSave; } set { deleteSave = value; } }
 
     private void Awake()
     {

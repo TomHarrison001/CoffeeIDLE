@@ -45,7 +45,12 @@ public class PlayerController : MonoBehaviour
         controller = FindObjectOfType<GameController>();
         power = 1;
         Reset();
-        LoadPlayer();
+        if (!controller.DeleteSave) LoadPlayer();
+        else
+        {
+            SavePlayer();
+            controller.DeleteSave = false;
+        }
         baristaText.text = baristas.ToString();
         if (baristas == 10)
             baristaBtn.gameObject.SetActive(false);
@@ -109,16 +114,16 @@ public class PlayerController : MonoBehaviour
 
     private void Produce(int i)
     {
-        double revenue = revenues[i] * multis[i] * levels[i] * power;
+        double revenue = revenues[i] * Math.Pow(2, multis[i] - 1) * levels[i] * power;
         if (levels[i] > 0 && baristas > i && timecaps[i] / multis[i] < 0.2)
         {
             fillImage[i].fillAmount = 1;
-            prodText[i].text = "$" + Notation(reward ? revenue * 2 / (timecaps[i] / multis[i]) : revenue / (timecaps[i] / multis[i])) + "/sec";
+            prodText[i].text = "$" + Notation((reward ? 2 : 1) * revenue / (timecaps[i] / multis[i])) + "/sec";
         }
         else
         {
             fillImage[i].fillAmount = Math.Min(1.0f, (float)(timers[i] / timecaps[i]));
-            prodText[i].text = "$" + Notation(reward ? revenue * 2 : revenue);
+            prodText[i].text = "$" + Notation((reward ? 2 : 1) * revenue);
         }
         if (levels[i] != 0)
         {
@@ -139,10 +144,10 @@ public class PlayerController : MonoBehaviour
                 CreateParticle();
                 PlayButtonAudio();
             }
-            double revenue = revenues[i] * multis[i] * levels[i] * power;
+            double revenue = revenues[i] * Math.Pow(2, multis[i] - 1) * levels[i] * power;
             if (timecaps[i] / multis[i] < 0.2) revenue *= timers[i] / timecaps[i];
-            money += reward ? revenue * 2 : revenue;
-            lifeMoney += reward ? revenue * 2 : revenue;
+            money += (reward ? 2 : 1) * revenue;
+            lifeMoney += (reward ? 2 : 1) * revenue;
             timers[i] = 0;
         }
     }
@@ -159,12 +164,9 @@ public class PlayerController : MonoBehaviour
                 levels[i]++;
                 titleText[i].text = names[i] + " (" + Notation(levels[i]) + ")";
                 costText[i].text = "$" + Notation(costs[i] * Math.Pow(powers[i], levels[i]));
-                if (levels[i] == 10)
-                    multis[i] *= 2;
-                if (levels[i] == 25)
-                    multis[i] *= 2;
-                if (levels[i] % 50 == 0)
-                    multis[i] *= 2;
+                if (levels[i] == 10 ||
+                    levels[i] == 25 ||
+                    levels[i] % 50 == 0) multis[i]++;
             } while (!single && money >= costs[i] * Math.Pow(powers[i], levels[i]));
         }
     }
@@ -195,7 +197,7 @@ public class PlayerController : MonoBehaviour
             CreateParticle();
             PlayButtonAudio();
             money -= 250000 * Math.Pow(2, upgrades);
-            multis[(int)Math.Floor(upgrades % 10)] *= 2;
+            multis[(int)Math.Floor(upgrades % 10)]++;
             upgrades++;
             upgradeBtn.text = names[(int)Math.Floor(upgrades % 10)] + "\n" + "$" + Notation(250000 * Math.Pow(2, upgrades));
         }
@@ -236,7 +238,9 @@ public class PlayerController : MonoBehaviour
             if (suffix < 5) suffixes = new List<string> { "", "K", "M", "B", "T" }[suffix];
             else
             {
-                suffixes = new List<string> { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" }[(suffix - 5) / 26];
+                suffixes = new List<string> { "", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" }[(suffix - 5) / 676];
+                suffix -= (suffix - 5) / 676 * 676;
+                suffixes += new List<string> { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" }[(suffix - 5) / 26];
                 suffixes += new List<string> { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" }[(suffix - 5) % 26];
             }
             string[] sigFigs = { "F2", "F1", "F0" };

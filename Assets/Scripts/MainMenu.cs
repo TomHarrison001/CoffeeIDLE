@@ -69,4 +69,9 @@ public class MainMenu : MonoBehaviour
     {
         StartCoroutine(controller.Quit());
     }
+
+    public void DeleteSave()
+    {
+        controller.DeleteSave = true;
+    }
 }
