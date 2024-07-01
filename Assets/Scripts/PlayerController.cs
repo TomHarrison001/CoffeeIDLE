@@ -56,8 +56,6 @@ public class PlayerController : MonoBehaviour
         unitsBtn.text = "X1";
         single = true;
         upgradeBtn.text = names[(int)Math.Floor(upgrades % 10)] + "\n" + "$" + Notation(250000 * Math.Pow(2, upgrades));
-        reward = false;
-        rewardTimer = 500;
     }
 
     private void Reset()
@@ -73,6 +71,8 @@ public class PlayerController : MonoBehaviour
             titleText[i].text = names[i] + " (" + Notation(levels[i]) + ")";
             costText[i].text = "$" + Notation(costs[i] * Math.Pow(powers[i], levels[i]));
         }
+        reward = false;
+        rewardTimer = 500;
     }
 
     private void FixedUpdate()
@@ -85,7 +85,7 @@ public class PlayerController : MonoBehaviour
             if (rewardTimer == 500)
             {
                 adBtn.SetActive(false);
-                rewardTimer = 100;
+                rewardTimer = 150;
             }
             rewardTimer -= Time.deltaTime;
             rewardTimerText.text = (rewardTimer).ToString("F0") + "s";
