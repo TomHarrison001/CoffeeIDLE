@@ -77,7 +77,6 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         moneyText.text = "$" + Notation(money);
         restartBtn.text = "Reset +" + Notation(10 * Math.Pow(30, Math.Log10(lifeMoney) / 3 - 4)) + "%";
         ProduceAll();
@@ -111,25 +110,23 @@ public class PlayerController : MonoBehaviour
     private void Produce(int i)
     {
         double revenue = revenues[i] * multis[i] * levels[i] * power;
-        if (timecaps[i] / multis[i] < 0.2)
+        if (levels[i] > 0 && baristas > i && timecaps[i] / multis[i] < 0.2)
         {
             fillImage[i].fillAmount = 1;
             prodText[i].text = "$" + Notation(reward ? revenue * 2 / (timecaps[i] / multis[i]) : revenue / (timecaps[i] / multis[i])) + "/sec";
         }
         else
         {
-            fillImage[i].fillAmount = (float)(timers[i] / timecaps[i]);
+            fillImage[i].fillAmount = Math.Min(1.0f, (float)(timers[i] / timecaps[i]));
             prodText[i].text = "$" + Notation(reward ? revenue * 2 : revenue);
         }
         if (levels[i] != 0)
         {
-            if (timers[i] < timecaps[i])
+            if (timers[i] < timecaps[i] || baristas > i)
                 timers[i] += Time.deltaTime * multis[i];
             else
-            {
                 timers[i] = timecaps[i];
-                if (baristas > i) Collect(i);
-            }
+            if (timers[i] >= timecaps[i] && baristas > i) Collect(i);
         }
     }
 
@@ -139,10 +136,11 @@ public class PlayerController : MonoBehaviour
         {
             if (baristas <= i)
             {
-                CreateParticle(mousePos);
+                CreateParticle();
                 PlayButtonAudio();
             }
             double revenue = revenues[i] * multis[i] * levels[i] * power;
+            if (timecaps[i] / multis[i] < 0.2) revenue *= timers[i] / timecaps[i];
             money += reward ? revenue * 2 : revenue;
             lifeMoney += reward ? revenue * 2 : revenue;
             timers[i] = 0;
@@ -153,7 +151,7 @@ public class PlayerController : MonoBehaviour
     {
         if (money >= costs[i] * Math.Pow(powers[i], levels[i]))
         {
-            CreateParticle(mousePos);
+            CreateParticle();
             PlayButtonAudio();
             do
             {
@@ -175,7 +173,7 @@ public class PlayerController : MonoBehaviour
     {
         if (money >= baristaCosts[baristas])
         {
-            CreateParticle(mousePos);
+            CreateParticle();
             PlayButtonAudio();
             money -= baristaCosts[baristas];
             baristas++;
@@ -194,7 +192,7 @@ public class PlayerController : MonoBehaviour
     {
         if (money >= 250000 * Math.Pow(2, upgrades))
         {
-            CreateParticle(mousePos);
+            CreateParticle();
             PlayButtonAudio();
             money -= 250000 * Math.Pow(2, upgrades);
             multis[(int)Math.Floor(upgrades % 10)] *= 2;
@@ -212,7 +210,7 @@ public class PlayerController : MonoBehaviour
 
     public void Restart()
     {
-        CreateParticle(mousePos);
+        CreateParticle();
         PlayButtonAudio();
         power += 0.1f * Math.Pow(30, Math.Log10(lifeMoney) / 3 - 4);
         Reset();
@@ -281,9 +279,9 @@ public class PlayerController : MonoBehaviour
         controller.LoadLevel(0);
     }
 
-    private void CreateParticle(Vector2 pos)
+    private void CreateParticle()
     {
-        GameObject g = Instantiate(particle, pos, Quaternion.identity);
+        GameObject g = Instantiate(particle, mousePos, Quaternion.identity);
         g.transform.localScale = new Vector2(0.02f, 0.02f);
         StartCoroutine(DestroyParticles(g));
     }
@@ -298,5 +296,10 @@ public class PlayerController : MonoBehaviour
     {
         audioManager.Play("select");
         if (controller.Vibrate) Vibration.Vibrate(30);
+    }
+
+    public void SetMousePos(Transform t)
+    {
+        mousePos = t.position;
     }
 }

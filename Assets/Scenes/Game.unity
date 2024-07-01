@@ -207,6 +207,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 118638720}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: SetMousePos
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 4354170}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 118638720}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: Upgrade
         m_Mode: 1
         m_Arguments:
@@ -720,6 +732,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 118638720}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: SetMousePos
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 116433636}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 118638720}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: Buy
@@ -1325,6 +1349,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 118638720}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: SetMousePos
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 147211788}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 118638720}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: Buy
         m_Mode: 3
         m_Arguments:
@@ -1725,6 +1761,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 118638720}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: SetMousePos
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 210618790}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 118638720}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: Buy
         m_Mode: 3
         m_Arguments:
@@ -1931,6 +1979,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 118638720}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: SetMousePos
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 228010759}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 118638720}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: Buy
@@ -2759,6 +2819,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 118638720}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: SetMousePos
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 321836788}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 118638720}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: Collect
         m_Mode: 3
         m_Arguments:
@@ -3562,6 +3634,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 118638720}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: SetMousePos
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 436388116}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 118638720}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: Collect
         m_Mode: 3
         m_Arguments:
@@ -4017,6 +4101,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 118638720}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: SetMousePos
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 533653125}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 118638720}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: Buy
@@ -4515,6 +4611,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 118638720}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: SetMousePos
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 601753684}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 118638720}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: Collect
         m_Mode: 3
         m_Arguments:
@@ -4646,6 +4754,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 118638720}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: SetMousePos
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 637100802}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 118638720}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: Buy
@@ -4854,6 +4974,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 118638720}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: SetMousePos
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 650695330}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 118638720}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: Collect
@@ -5371,6 +5503,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 118638720}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: SetMousePos
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 775147359}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 118638720}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: Collect
         m_Mode: 3
         m_Arguments:
@@ -5504,6 +5648,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 118638720}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: SetMousePos
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 803848905}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 118638720}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: Collect
         m_Mode: 3
         m_Arguments:
@@ -5635,6 +5791,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 118638720}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: SetMousePos
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 811816950}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 118638720}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: Collect
@@ -5806,6 +5974,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 118638720}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: SetMousePos
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 852323238}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 118638720}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: Restart
@@ -6724,6 +6904,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 118638720}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: SetMousePos
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 975928631}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 118638720}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: Collect
         m_Mode: 3
         m_Arguments:
@@ -7590,6 +7782,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 118638720}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: SetMousePos
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1148978637}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 118638720}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: Buy
         m_Mode: 3
         m_Arguments:
@@ -7760,6 +7964,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 118638720}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: SetMousePos
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1169436213}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 118638720}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: Buy
@@ -7933,7 +8149,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 62.1
+  m_fontSize: 61.6
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -8275,6 +8491,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 118638720}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: SetMousePos
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1290000852}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 118638720}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: Collect
@@ -8826,6 +9054,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 118638720}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: SetMousePos
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1354756042}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 118638720}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: Buy
@@ -9417,6 +9657,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 118638720}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: SetMousePos
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1497382180}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 118638720}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: Buy
         m_Mode: 3
         m_Arguments:
@@ -9722,7 +9974,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 62.1
+  m_fontSize: 61.6
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -10586,6 +10838,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 118638720}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: SetMousePos
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1726418793}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 118638720}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: Automate
         m_Mode: 1
         m_Arguments:
@@ -11062,6 +11326,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 118638720}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: SetMousePos
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1899999694}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 118638720}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: Collect
@@ -12480,7 +12756,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 62.1
+  m_fontSize: 61.6
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
